@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { PropType } from "vue";
-import { badgeColors, type Unit } from "../interfaces/types";
+import type { Unit } from "../interfaces/types";
+import { badgeColors } from "../helpers/helpers";
+import svgIcon from "./SvgIcon.vue";
 
 const props = defineProps({
   tabValue: String,
@@ -18,10 +20,13 @@ const getBadgeColor = (value?: string) => {
 </script>
 
 <template>
-  <v-tab :value="props.tabValue">
-    <div>
-      <v-tab-text>{{ props.tabText }}</v-tab-text>
-      <v-badge v-if="hasUnits(props?.units)" :color="getBadgeColor(props.tabValue)" inline dot />
+  <v-tab :value="props.tabValue" class="h-auto">
+    <div class="d-flex flex-wrap">
+      <div><svgIcon :name="props.tabValue!" /></div>
+      <div class="flex start">
+        <v-tab-text>{{ props.tabText }}</v-tab-text>
+        <v-badge v-if="hasUnits(props?.units)" :color="getBadgeColor(props.tabValue)" inline dot />
+      </div>
     </div>
   </v-tab>
 </template>

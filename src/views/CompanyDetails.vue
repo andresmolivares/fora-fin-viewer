@@ -4,6 +4,7 @@ import { useRoute } from "vue-router";
 import { companyInfoService } from "../services/CompanyInfoService";
 import type { CompanyInfo } from "../interfaces/types";
 import ResourceCard from "../components/ResourceCard.vue";
+import { appTheme } from "../helpers/helpers";
 
 const route = useRoute();
 const cikId = route.params.id as string;
@@ -31,7 +32,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div>
+  <div class="ma-20">
     <div>
       <v-card>
         <v-card-title>{{ companyInfo?.name }}</v-card-title>
@@ -43,7 +44,7 @@ onMounted(async () => {
 
     <h2>Resources</h2>
     <v-card>
-      <v-tabs v-model="activeTab" bg-color="primary" class="static-tabs">
+      <v-tabs v-model="activeTab" :theme="appTheme" class="static-tabs">
         <v-tab value="{{deiTabLabel}}">Dei</v-tab>
         <v-tab value="{{usGaapTabLabel}}">US Gaap</v-tab>
       </v-tabs>

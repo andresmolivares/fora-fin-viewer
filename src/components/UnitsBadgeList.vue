@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { PropType } from "vue";
-import { badgeColors, type FinancialResourceHeader } from "../interfaces/types";
+import type { FinancialResourceHeader } from "../interfaces/types";
+import { badgeColors } from "../helpers/helpers";
 
 const props = defineProps({
   resource: Object as PropType<FinancialResourceHeader>,

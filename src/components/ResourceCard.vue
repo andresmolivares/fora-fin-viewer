@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, type PropType } from "vue";
+import type { PropType } from "vue";
 import type { CompanyInfo, FinancialResourceHeader } from "../interfaces/types";
 import BadgeList from "./UnitsBadgeList.vue";
 
