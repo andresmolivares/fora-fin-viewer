@@ -6,4 +6,4 @@ The following project is a POC solution for a Fora Financial front end works wit
 - Pinia
 - Axios
 
-**Run the app** - This application relies on the ForaFinServices/full-mode-support branch for its back, which builds on the ability to company calculate fundable amounts, but allows users to review company fact data. Ensure the ForaFinServices are running then launch the client application to get going.
+**Run the app** - This application relies on the ForaFinServices/full-mode-support branch for its backend, which builds on the ability to company calculate fundable amounts. The client application provides a UX where users can review company fact data. Ensure the ForaFinServices/full-mode-support branch is running, then launch the client application to get going.
