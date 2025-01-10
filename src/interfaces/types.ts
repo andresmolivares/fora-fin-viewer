@@ -710,3 +710,10 @@ export interface Pagination {
   sortBy?: string[];
   sortDesc?: string[];
 }
+
+export interface FundableAmount {
+  id?: string;
+  name?: string;
+  standardFundableAmount: number;
+  specialFundableAmount: number;
+}

@@ -44,7 +44,7 @@ const isUnitAvailable = (resource: FinancialResourceHeader, name: string) => {
     <v-row class="d-flex flex-row flex-nowrap justify-center">
       <v-col v-for="(badge, index) in badgeColors" :key="index" cols="auto" class="text-center">
         <v-badge :color="badge.color" dot v-if="isUnitAvailable(props.resource!, badge.name)">
-          <v-tooltip activator="parent" location="start">{{ badge.name }}</v-tooltip>
+          <v-tooltip activator="parent" location="start" :text="badge.name" />
         </v-badge>
       </v-col>
     </v-row>

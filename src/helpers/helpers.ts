@@ -1,5 +1,8 @@
 import { ref } from "vue";
 
+export const deiTabLabel = "dei";
+export const usGaapTabLabel = "usGaap";
+
 export const badgeColors = [
   { name: "derivativeAgreement", color: "#50C878" },
   { name: "employee", color: "#FFD700" },

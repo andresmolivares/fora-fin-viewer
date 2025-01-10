@@ -11,6 +11,7 @@ import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import { aliases, mdi } from "vuetify/iconsets/mdi";
 import "@mdi/font/css/materialdesignicons.css";
+import { createPinia } from "pinia";
 
 const vuetify = createVuetify({
   components,
@@ -27,4 +28,6 @@ const vuetify = createVuetify({
   },
 });
 
-createApp(App).component("svgIcon", svgIcon).use(vuetify).use(router).mount("#app");
+const pinia = createPinia();
+
+createApp(App).component("svgIcon", svgIcon).use(pinia).use(vuetify).use(router).mount("#app");

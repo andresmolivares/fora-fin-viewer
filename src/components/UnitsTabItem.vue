@@ -23,8 +23,8 @@ const getBadgeColor = (value?: string) => {
   <v-tab :value="props.tabValue" class="h-auto">
     <div class="d-flex flex-wrap">
       <div><svgIcon :name="props.tabValue!" /></div>
-      <div class="flex start">
-        <v-tab-text>{{ props.tabText }}</v-tab-text>
+      <div class="d-flex flex-wrap flex start">
+        <div>{{ props.tabText }}</div>
         <v-badge v-if="hasUnits(props?.units)" :color="getBadgeColor(props.tabValue)" inline dot />
       </div>
     </div>
