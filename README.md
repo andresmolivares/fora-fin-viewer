@@ -1,5 +1,9 @@
-# Vue 3 + TypeScript + Vite
+# Extra - ForaFinViewer
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+The following project is a POC solution for a Fora Financial front end works with the [full-mode-support](https://github.com/andresmolivares/ForaFinServices/tree/full-model-support) branch of the ForaFinServices project. The project uses the following front end tech stack:
+- Vue3 with Vite
+- Vuetify
+- Pinia
+- Axios
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+**Run the app** - This application relies on the ForaFinServices/full-mode-support branch for its back, which builds on the ability to company calculate fundable amounts, but allows users to review company fact data. Ensure the ForaFinServices are running then launch the client application to get going.
