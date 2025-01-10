@@ -28,9 +28,9 @@ const getMappedResourceHeaders = (resourceParent: Record<string, any>) => {
     }))
     .filter((m) => m.resource != null);
 
-  const query = searchQuery.value.toLowerCase();
-  if (query.trim()?.length > 2) {
+  if (searchQuery.value?.trim()?.length > 2) {
     store.setSearchCriteria(searchQuery.value);
+    const query = searchQuery.value.toLowerCase();
     return results.filter(
       (m) =>
         (m.resource.label && m.resource.label?.toLowerCase().includes(query)) ||
@@ -103,6 +103,7 @@ onUnmounted(() => {
               v-if="searchVisible"
               v-model="searchQuery"
               :text="searchQuery"
+              autofocus
               label="Search"
               single-line
               hide-details
@@ -132,7 +133,7 @@ onUnmounted(() => {
                   :companyInfo="companyInfo"
                   :resource="mappedResource.resource"
                   :resourceName="mappedResource.name"
-                  :searchQuery="searchQuery.toLowerCase()"
+                  :searchQuery="searchQuery?.toLowerCase()"
                 />
               </v-col>
             </v-row>
@@ -144,7 +145,7 @@ onUnmounted(() => {
                   :companyInfo="companyInfo"
                   :resource="mappedResource.resource"
                   :resourceName="mappedResource.name"
-                  :searchQuery="searchQuery.toLowerCase()"
+                  :searchQuery="searchQuery?.toLowerCase()"
                 />
               </v-col>
             </v-row>

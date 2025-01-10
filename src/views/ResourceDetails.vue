@@ -23,7 +23,6 @@ const navBack = () => {
 };
 
 const companyName = ref("");
-console.log("store.companyDetails.searchCriteria", store.companyDetails.searchCriteria);
 
 onMounted(async () => {
   companyName.value = store.companyDetails.companyName;
@@ -44,7 +43,8 @@ onMounted(async () => {
         <v-card>
           <v-card-title>
             <div class="d-flex flex-row">
-              <div>({{ companyName }} - {{ cikId }}) {{ resource?.label }}</div>
+              <div>({{ companyName }} - {{ cikId }})</div>
+              <div class="font-weight-bold">&nbsp;{{ resource?.label }}</div>
             </div>
           </v-card-title>
           <v-card-text>{{ resource?.description }}</v-card-text>
